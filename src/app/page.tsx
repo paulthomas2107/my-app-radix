@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Container, Flex, Heading, Text, Card, Badge } from '@radix-ui/themes';
+import { ChatBubbleIcon } from '@radix-ui/react-icons';
 
 export default function Home() {
   return (
@@ -14,16 +15,65 @@ export default function Home() {
         <Flex gap="4" direction="column">
           <Card>
             <Flex gap="1" direction="column">
-              <Text>Issue #24 - Button is wrong colour.</Text>
+              <Text>Issue #UK(OP-754211) - Button has wrong spelling.</Text>
               <Flex gap="2">
                 <Badge color="orange">Devops</Badge>
                 <Badge color="blue">UI</Badge>
               </Flex>
               <Text>
-                This is an issue that is very serious. On a dashboard that only
-                has 500 users there is a button which has wrong Bulgrian
-                spelling for Cancel.
+                This is an issue that is very serious. On a dashboard that has
+                500 users there is a button which has the wrong Bulgarian
+                spelling for Cancel (Отказ).
               </Text>
+              <Flex justify="between" pt="1">
+                <Flex align="center">
+                  <ChatBubbleIcon />
+                  <Text ml="2" color="gray" size="1">
+                    3 Comments
+                  </Text>
+                </Flex>
+                <ChatBubbleIcon color="red"></ChatBubbleIcon>
+              </Flex>
+            </Flex>
+          </Card>
+          <Card>
+            <Flex gap="1" direction="column">
+              <Text>Issue #UK(OP-7542999) - Crash in Prod.</Text>
+              <Flex gap="2">
+                <Badge color="orange">Devops</Badge>
+                <Badge color="green">ProdSupp</Badge>
+              </Flex>
+              <Text>Production crash in early evening. See attachmnent.</Text>
+              <Flex justify="between" pt="1">
+                <Flex align="center">
+                  <ChatBubbleIcon />
+                  <Text ml="2" color="gray" size="1">
+                    1 Comment
+                  </Text>
+                </Flex>
+                <ChatBubbleIcon color="red"></ChatBubbleIcon>
+              </Flex>
+            </Flex>
+          </Card>
+          <Card>
+            <Flex gap="1" direction="column">
+              <Text>Issue #UK(OP-82777122) - GitHub not working.</Text>
+              <Flex gap="2">
+                <Badge color="pink">Dev</Badge>
+                <Badge color="blue">UI</Badge>
+              </Flex>
+              <Text>
+                GitHub seems to be broken.
+              </Text>
+              <Flex justify="between" pt="1">
+                <Flex align="center">
+                  <ChatBubbleIcon />
+                  <Text ml="2" color="gray" size="1">
+                    2 Comments
+                  </Text>
+                </Flex>
+                <ChatBubbleIcon color="yellow"></ChatBubbleIcon>
+              </Flex>
             </Flex>
           </Card>
         </Flex>
